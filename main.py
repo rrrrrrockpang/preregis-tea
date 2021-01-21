@@ -19,11 +19,6 @@ variables = [
         'categories': ['SE', 'SD']
     },
     {
-        'name': 'text_condition',
-        'data type': 'nominal',
-        'categories': ['show_both_stats', 'show_viz_stats_only']
-    },
-    {
         'name': 'wtp_final',
         'data type': 'interval'
     },
@@ -39,10 +34,10 @@ tea.define_variables(variables)
 study_design = {
     'study_type': 'experiment',
     'independent variables': ['condition', 'text_condition'],
-    'dependent variables': 'wtp_final'
+    'dependent variables': ['wtp_final', 'superiority_special']
 }
 
 tea.define_study_design(study_design)
 
 tea.hypothesize(['condition', 'wtp_final'], ['condition: SE > SD'])
-
+tea.hypothesize(['condition', 'superiority_special'], ['condition: SE > SD'])
