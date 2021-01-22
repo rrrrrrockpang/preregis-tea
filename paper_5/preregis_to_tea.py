@@ -10,7 +10,7 @@ import tea
 #################################################
 
 ## Run Tea on separate conditions
-tea.data("data/show_both_stats.csv", key="worker_id")
+tea.data("data.csv", key="worker_id")
 
 variables = [
     {
